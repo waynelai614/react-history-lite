@@ -5,6 +5,8 @@ import { HistoryContextShape } from 'types'
 import { getUrlParams } from 'utils/base'
 import { connectHistory } from './connect'
 
+export const defaultParamsSelector = ({ search }) => getUrlParams(search)
+
 /**
  * @param {Object} historyCtx - <HistoryContext.Provider />'s context
  * @param {Function} paramsSelector - default `(location) => getUrlParams(location.search)`
@@ -39,7 +41,7 @@ export class Location extends PureComponent {
   }
 
   static defaultProps = {
-    paramsSelector: ({ search }) => getUrlParams(search),
+    paramsSelector: defaultParamsSelector,
   }
 
   componentDidUpdate(prevProps) {
