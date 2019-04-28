@@ -27,10 +27,14 @@ module.exports = {
     "arrow-body-style": 0,
     "arrow-parens": 0,
     "import/prefer-default-export": 0,
+    "import/no-named-as-default": 0,
     "import/no-extraneous-dependencies": 0,
     "no-param-reassign": ["error", {
       "props": false
     }],
+    "react/forbid-prop-types": 0,
+    "react/require-default-props": 0,
+    "react/destructuring-assignment": 0,
     "react/jsx-filename-extension": [1, {
       "extensions": [".js", ".jsx"]
     }]
