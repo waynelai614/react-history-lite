@@ -9,7 +9,7 @@ module.exports = {
   entry: [
     'react-hot-loader/patch',
     'webpack-dev-server/client?http://0.0.0.0:3000',
-    './src/index.js'
+    './example/index.js'
   ],
   output: {
     filename: 'bundle.js',
