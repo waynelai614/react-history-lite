@@ -7,7 +7,7 @@ import { connectHistory } from './connect'
 
 /**
  * @param {Object} historyCtx - <HistoryContext.Provider />'s context
- * @param {Function} paramsSelector - default `baseUtils.getUrlParams()`
+ * @param {Function} paramsSelector - default `(location) => getUrlParams(location.search)`
  * selector function to extract params data from location,
  * and pass as second argument to `onChange()`
  *  e.g.
@@ -39,7 +39,7 @@ export class Location extends PureComponent {
   }
 
   static defaultProps = {
-    paramsSelector: getUrlParams,
+    paramsSelector: ({ search }) => getUrlParams(search),
   }
 
   componentDidUpdate(prevProps) {
