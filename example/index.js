@@ -7,15 +7,24 @@ import Page from './page'
 
 import './style.scss'
 
-const App = () => (
+const SearchBoxApp = () => (
   <HistoryContext.Provider>
-    <h1>React History Lite Demo</h1>
     <SearchBox />
+  </HistoryContext.Provider>
+)
+
+const PageApp = () => (
+  <HistoryContext.Provider>
     <Page />
   </HistoryContext.Provider>
 )
 
 ReactDOM.render(
-  <App />,
-  document.getElementById('app')
+  <SearchBoxApp />,
+  document.getElementById('search-box')
+)
+
+ReactDOM.render(
+  <PageApp />,
+  document.getElementById('page')
 )
