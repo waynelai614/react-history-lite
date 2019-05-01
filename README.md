@@ -127,6 +127,32 @@ const Foo = ({ historyCtx }) => {
 export default connectHistory(Foo)
 ```
 
+## Navigation
+Use the `history` object methods to change the current location.
+
+Please see [ReactTraining/history#navigation](https://github.com/ReactTraining/history#navigation) for more details.
+
+### Usage
+```js
+import { $history } from 'utils/history'
+
+const doSearch = (params = {}) => {
+  const { keyword } = params
+  const searchUrl = `/?keyword=${keyword}`
+
+  $history.push(searchUrl)
+}
+
+const SearchButton = () => (
+  <button
+    type="button"
+    onClick={() => doSearch({ keyword: 'iPhone' })}
+  >
+    Search iPhone
+  </button>
+)
+```
+
 ## Development
 1. Clone this repository
 ```
