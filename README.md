@@ -1,5 +1,5 @@
 # react-history-lite
-`react-history-lite` provides tools to manage session history using `React`. This is a simple wrapper of [`history`](https://github.com/ReactTraining/history) library, allowss you to develop a SPA `React` project without install the whole [`react-router`](https://github.com/ReactTraining/react-router).
+`react-history-lite` provides tools to manage session history using `React`. This is a simple wrapper of [`history`](https://github.com/ReactTraining/history) library, allows you to develop a SPA `React` project without install the whole [`react-router`](https://github.com/ReactTraining/react-router).
 
 **Note:** This project is suit for small SPA, if you need to handle routes between different components, [`react-router`](https://github.com/ReactTraining/react-router) is your best choice.
 
